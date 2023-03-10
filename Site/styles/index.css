@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana,sans-serif
+}
+body {
+  min-width: 100vh
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99
+}
+.logWorkRussia {
+  height: 100px;
+  user-select: none
+}
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 40px
+}
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+}
+.btnLogin {
+  width: 130px;
+  height: 50px;
+  background: 0 0;
+  border: 2px solid #fff;
+  outline: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s
+}
+.btnLogin:hover {
+  background: #fff;
+  color: #162938
+}
