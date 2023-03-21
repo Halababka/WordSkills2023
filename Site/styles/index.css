@@ -1,43 +1,55 @@
+:root {
+  --lightblue: rgb(105,179,231);
+  --bluecolor: rgb(0,51,160);
+  --orangecolor: rgb(207,69,32)
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana, sans-serif
+  font-family: Verdana,sans-serif
 }
-
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 100vh
 }
-
 header {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 0px 100px;
-  background: red;
+  padding: 0 100px;
+  /* background: red; */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 99
 }
-
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px
+}
 .logWorkRussia {
   height: 100px;
   user-select: none
 }
-
+.navigation {
+  margin-left: auto
+}
 .navigation a {
+  margin-left: auto;
   position: relative;
   font-size: 1.1em;
   text-decoration: none;
-  color: #fff;
+  color: var(--lightblue);
   margin-left: 40px
 }
-
 .navigation a::after {
   content: '';
   position: absolute;
@@ -45,21 +57,20 @@ header {
   bottom: -6px;
   width: 100%;
   height: 3px;
-  background: #fff;
+  background: var(--bluecolor);
   border-radius: 5px;
   transform: scaleX(0);
   transition: transform .5s
 }
-
 .navigation a:hover::after {
   transform: scaleX(1)
 }
-
 .btnLogin {
   width: 130px;
   height: 50px;
   background: 0 0;
   border: 2px solid #fff;
+  background-color: var(--lightblue);
   outline: 0;
   border-radius: 6px;
   cursor: pointer;
@@ -69,17 +80,15 @@ header {
   margin-left: 40px;
   transition: .5s
 }
-
 .btnLogin:hover {
-  background: #fff;
-  color: #162938
+  background: var(--bluecolor);
+  color: #fff
 }
-
 .button-icon-versia-slabovid {
   height: 50px;
   width: 50px;
   background-image: url(../media/eye.svg);
   background-repeat: no-repeat;
   background-color: transparent;
-  border: transparent;
+  border: transparent
 }
