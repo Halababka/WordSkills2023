@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100vh
+  min-height: 100vh
 }
 header {
   position: fixed;
@@ -21,7 +21,6 @@ header {
   top: 0;
   left: 0;
   padding: 0 100px;
-  /* background: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +41,8 @@ header {
 .navigation {
   margin-left: auto
 }
-.navigation a {
+.navigation a,
+.select-role a {
   margin-left: auto;
   position: relative;
   font-size: 1.1em;
