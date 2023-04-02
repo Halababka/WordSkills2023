@@ -1,22 +1,26 @@
 :root {
-  --lightblue: rgb(105,179,231);
-  --bluecolor: rgb(0,51,160);
-  --orangecolor: rgb(207,69,32)
+  --lightblue: rgb(105, 179, 231);
+  --bluecolor: rgb(0, 51, 160);
+  --orangecolor: rgb(207, 69, 32)
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana,sans-serif
+  font-family: Verdana, sans-serif
 }
+
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh
 }
+
 header {
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
@@ -24,8 +28,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99
+  z-index: 99;
+  border-bottom: 1px solid #5c5c5c;
+  background-color: #fff;
 }
+
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -34,13 +41,16 @@ header {
   width: 100%;
   max-width: 1200px
 }
+
 .logWorkRussia {
   height: 100px;
   user-select: none
 }
+
 .navigation {
   margin-left: auto
 }
+
 .navigation a,
 .select-role a {
   margin-left: auto;
@@ -50,6 +60,7 @@ header {
   color: var(--lightblue);
   margin-left: 40px
 }
+
 .navigation a::after {
   content: '';
   position: absolute;
@@ -62,9 +73,11 @@ header {
   transform: scaleX(0);
   transition: transform .5s
 }
+
 .navigation a:hover::after {
   transform: scaleX(1)
 }
+
 .btnLogin {
   width: 130px;
   height: 50px;
@@ -80,10 +93,12 @@ header {
   margin-left: 40px;
   transition: .5s
 }
+
 .btnLogin:hover {
   background: var(--bluecolor);
   color: #fff
 }
+
 .button-icon-versia-slabovid {
   height: 50px;
   width: 50px;
@@ -92,8 +107,170 @@ header {
   background-color: transparent;
   border: transparent
 }
-.form-box {
-  position: relative;
-  
 
+
+.main {
+  position: relative;
+  padding-top: 20px;
+}
+
+/* .main {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+} */
+
+.wrapper {
+  position: relative;
+  padding: 40px 50px;
+  border: 2px solid var(--lightblue);
+  border-radius: 15px;
+  background-color: #fff;
+  backdrop-filter: blur(30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.form-box h1 {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.form-box h2 {
+  font-size: 1.5em;
+  text-align: left;
+  color: black;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid var(--bluecolor);
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-box label {
+  width: 30%;
+}
+
+.input-box input {
+  width: 70%;
+  height: 70%;
+  outline: none;
+}
+
+.remember-forgot {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.9em;
+  color: black;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot a {
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.radio-choice {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.radio-choice input {
+  margin-left: 5px;
+  width: 15%;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  border: none;
+  background: var(--bluecolor);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: rgb(0, 35, 110);
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #f7f7f7;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 15px;
+  margin-bottom: 60px;
+}
+
+.footer-nav-title {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.footer-link {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: black;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.com-sm6 {
+  flex: 0 0 50%;
+}
+
+.link {
+  display: block;
+  margin-top: 20px;
+  color: rgb(56, 56, 56);
+  
+}
+
+.link:hover {
+  color: var(--bluecolor);
 }
