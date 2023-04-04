@@ -164,9 +164,17 @@ header {
 }
 
 .input-box input {
+  border: 1px  solid #5c5c5c;
+  padding: 0px 10px;
+  border-radius: 10px;
   width: 70%;
   height: 70%;
   outline: none;
+}
+
+.input-box input:active {
+  box-shadow: 0 0 10px var(--bluecolor);
+
 }
 
 .remember-forgot {
