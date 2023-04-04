@@ -29,27 +29,27 @@
             <div class="form-box">
                 <h1>Регистрация</h1>
                 <h2>Соискатель</h2>
-                <a class="link" href="#">Я работадатель</a>
+                <a class="link" href="regRabot.html">Я работадатель</a>
                 <form method="post" action="#">
                     <div class="input-box">
                         <label>Почта</label>
-                        <input type="email" name="email" required>
+                        <input class="input-form" type="email" name="email" required>
                     </div>
                     <div class="input-box">
                         <label>Пароль</label>
-                        <input type="password" required>
+                        <input class="input-form" type="password" required>
                     </div>
                     <div class="input-box">
                         <label>Имя</label>
-                        <input type="text" name="firstName" autocomplete="given-name" required>
+                        <input class="input-form" type="text" name="firstName" autocomplete="given-name" required>
                     </div>
                     <div class="input-box">
                         <label>Фамилия</label>
-                        <input type="text" name="lastName" autocomplete="family-name" required>
+                        <input class="input-form" type="text" name="lastName" autocomplete="family-name" required>
                     </div>
                     <div class="input-box">
                         <label>Отчество</label>
-                        <input type="text" name="patronymic">
+                        <input class="input-form" type="text" name="patronymic">
                     </div>
                     <div class="input-box">
                         <label>Пол</label>
@@ -62,11 +62,13 @@
                     </div>
                     <div class="input-box">
                         <label>Номер телефона</label>
-                        <input type="tel" required>
+                        <input class="input-form" type="tel" required>
                     </div>
                     <div class="remember-forgot">
-                        <input type="checkbox" name="forgot" id="remember-forgot">
-                        <a href="#"><label for="remember-forgot">Я согласен с правилами и условиями</label></a>
+                        <div>
+                            <input type="checkbox" name="forgot" id="remember-forgot">
+                            <a href="#"><label for="remember-forgot">Я согласен с правилами и условиями</label></a>
+                        </div>
                     </div>
                     <button type="submit" class="btn">Зарегистрироваться</button>
                 </form>
@@ -80,7 +82,8 @@
                     <div class="row">
                         <section class="footer-section-content com-sm6">
                             <h5 class="footer-nav-title">Работа России</h5>
-                            <a href="#"><img src="./media/WorkRussia.png" class="logWorkRussia" alt="Логотип Работа России"></a>
+                            <a href="#"><img src="./media/WorkRussia.png" class="logWorkRussia"
+                                    alt="Логотип Работа России"></a>
                         </section>
                         <section class="footer-section-content com-sm6">
                             <h5 class="footer-nav-title">Работадатели</h5>

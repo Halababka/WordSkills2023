@@ -27,7 +27,9 @@
     <div class="main">
         <div class="wrapper">
             <div class="form-box">
-                <h1>Вход в личный кабинет</h1>
+                <h1>Регистрация</h1>
+                <h2>Работадатель</h2>
+                <a class="link" href="regSoisk.html">Я ищу работу</a>
                 <form method="post" action="#">
                     <div class="input-box">
                         <label>Почта</label>
@@ -37,17 +39,46 @@
                         <label>Пароль</label>
                         <input class="input-form" type="password" required>
                     </div>
+                    <div class="input-box">
+                        <label>Имя</label>
+                        <input class="input-form" type="text" name="firstName" autocomplete="given-name" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Фамилия</label>
+                        <input class="input-form" type="text" name="lastName" autocomplete="family-name" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Отчество</label>
+                        <input class="input-form" type="text" name="patronymic">
+                    </div>
+                    <div class="input-box">
+                        <label>Пол</label>
+                        <div class="radio-choice">
+                            <input type="radio" name="gender" id="male" value="male" required>
+                            <label for="male">Мужской</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Женский</label>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <label>Название компании</label>
+                        <input class="input-form" type="tel" required>
+                    </div>
+                    <div class="input-box">
+                        <label>ИНН компании</label>
+                        <input class="input-form" type="tel" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Адрес компании</label>
+                        <input class="input-form" type="tel" required>
+                    </div>
                     <div class="remember-forgot">
                         <div>
                             <input type="checkbox" name="forgot" id="remember-forgot">
-                            <label for="remember-forgot">Запомнить меня</label>
+                            <a href="#"><label for="remember-forgot">Я согласен с правилами и условиями</label></a>
                         </div>
-                        <a>Забыли пароль?</a>
                     </div>
-                    <div>
-                        <a class="link" href="regSoisk.html">Нет аккаунта? Зарегистрироваться</a>
-                    </div>
-                    <button type="submit" class="btn">Войти</button>
+                    <button type="submit" class="btn">Зарегистрироваться</button>
                 </form>
             </div>
         </div>

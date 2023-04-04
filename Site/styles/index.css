@@ -30,6 +30,7 @@ header {
   align-items: center;
   z-index: 99;
   border-bottom: 1px solid #5c5c5c;
+  box-shadow: 0px 1px 5px 0px #5c5c5c;
   background-color: #fff;
 }
 
@@ -164,7 +165,7 @@ header {
 }
 
 .input-box input {
-  border: 1px  solid #5c5c5c;
+  border: 1px solid #5c5c5c;
   padding: 0px 10px;
   border-radius: 10px;
   width: 70%;
@@ -172,13 +173,13 @@ header {
   outline: none;
 }
 
-.input-box input:active {
+.input-form:focus {
   box-shadow: 0 0 10px var(--bluecolor);
-
 }
 
 .remember-forgot {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   align-items: center;
   font-size: 0.9em;
@@ -187,6 +188,8 @@ header {
 }
 
 .remember-forgot a {
+  cursor: pointer;
+  color: black;
   text-decoration: none;
 }
 
@@ -273,10 +276,12 @@ footer {
 }
 
 .link {
+  width: max-content;
   display: block;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: rgb(56, 56, 56);
-  
+
 }
 
 .link:hover {
