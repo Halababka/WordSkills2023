@@ -25,7 +25,7 @@ header {
 
 main {
     flex-grow: 1;
-    padding: 50px 0;
+    padding: 50px 50px;
 }
 
 footer {
@@ -34,13 +34,17 @@ footer {
     margin-top: auto;
 }
 
-.carousel-control-next, .carousel-control-prev {
-    width: auto!important;
+.carousel-control-next,
+.carousel-control-prev {
+    width: auto !important;
 }
 
-.card {
-    margin: auto;
+
+.carousel h1 {
+    font-size: 2.5em;
+    text-align: center;
 }
+
 
 .wrapper {
     max-width: 1500px;
@@ -69,14 +73,18 @@ footer {
     margin-bottom: 50px;
 }
 
+.footer-section h5 {
+    font-weight: bolder;
+}
+
 .footer-nav-title {
     margin-bottom: 15px;
     font-size: 1em;
-  }
+}
 
 .footer_nav-link {
     font-size: 0.9em;
-    color: black;
+    color: #5c5c5c;
     text-decoration: none;
     padding: 5px 0;
 }
@@ -120,7 +128,27 @@ footer {
     transition: .5s
 }
 
+.btn-outline-primary {
+    color: var(--lightblue)!important;
+    border-color: var(--lightblue)!important;
+}
+
+.btn-outline-primary:hover {
+    background: var(--lightblue)!important;
+    color: white!important;
+}
+
 .btnLogin:hover {
     background: var(--bluecolor);
     color: #fff
 }
+
+.news-block {
+    border: 1px solid var(--lightblue);
+    border-radius: 0.35rem;
+    min-width: min-content;
+}
+
+.form-select {
+    max-width: fit-content!important;
+}   
