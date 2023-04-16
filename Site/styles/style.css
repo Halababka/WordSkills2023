@@ -152,3 +152,7 @@ footer {
 .form-select {
     max-width: fit-content!important;
 }   
+
+.card {
+    margin: auto;
+}
