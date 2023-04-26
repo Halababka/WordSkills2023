@@ -6,15 +6,11 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     const formData = new FormData(event.target);
     const username = formData.get('username');
     const password = formData.get('password');
+    
+    let isAuthorized = await checkCredentials(username, password);
+    isAuthorized = localStorage.getItem('token')    
 
-    // проверяем учетные данные (метод checkCredentials должен быть определен)
-    let localeToken = localStorage.getItem("token")
-    if (localeToken) {
-        const isAuthorized = localeToken
-    } else {
-        const isAuthorized = await checkCredentials(username, password);
-    }
-    if (isAuthorized) {
+    if (isAuthorized != "undefined") {
         // если учетные данные верны, перенаправляем пользователя на другую страницу
         window.location.href = '../site/index.html'; // замените "/dashboard" на ссылку на нужную страницу
     } else {
@@ -43,7 +39,10 @@ async function checkCredentials(username, password) {
         headers: { 'Content-Type': 'application/json' }
     });
 
+    if(response.status == 403) {
+        window.location.href = '../site/index.html';
+    }
     const data = await response.json();
-    localStorage.setItem("token", data.token)
+    localStorage.setItem('token', data.token)
     return data.token; // замените на то, как ваш сервер возвращает флаг, который указывает, что учетные данные верны
 }
