@@ -2,11 +2,12 @@ const url = "http://alatech-api/alatech/api/";
 const app = {
     data() {
         return {
+            items: [{ message: 'Foo', name: "Fo" }, { message: 'Bar', name: "Ba" }],
             auth: false,
             login: '',
             pass: '',
         }
-    },  
+    },
     methods: {
         goauth() {
             const data = { username: this.login, password: this.pass };
@@ -29,7 +30,7 @@ const app = {
     },
     mounted() {
         if (localStorage.getItem('token')) {
-            if(localStorage.getItem('token') != 'undefined') {
+            if (localStorage.getItem('token') != 'undefined') {
                 this.auth = true
             } else {
                 this.auth = false

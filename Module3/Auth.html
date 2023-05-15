@@ -16,6 +16,11 @@
                 <label for="password">Пароль: {{pass}}</label>
                 <input type="password" id="password" name="password" v-model="pass" required><br>
                 <button type="submit">Войти</button>
+                <ul id="example">
+                    <li v-for="item in items" :title="item.message + '\n' + item.name">
+                        {{ item.message}}, {{ item.name }} <br>
+                    </li>
+                </ul>
             </form>
         </section>
 
