@@ -9,7 +9,7 @@ const app = {
         }
     },
     methods: {
-        goauth() {
+        goauth() {ц
             const data = { username: this.login, password: this.pass };
             fetch(url + 'login', {
                 method: 'POST',
@@ -20,8 +20,11 @@ const app = {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    localStorage.setItem('token', data.token);
-                    this.auth = true;
+                    if (typeof(data.token) != 'undefined') {
+                        localStorage.setItem('token', data.token);
+                        this.auth = true;
+                        window.location.href = "./home.html";
+                    }
                 })
                 .catch((error) => {
                     console.error('Error', error);
@@ -30,13 +33,16 @@ const app = {
     },
     mounted() {
         if (localStorage.getItem('token')) {
-            if (localStorage.getItem('token') != 'undefined') {
-                this.auth = true
+            if (typeof(localStorage.getItem('token')) != 'undefined') {
+                this.auth = true;
+                window.location.href = "./home.html";
+                alert('Вы уже авторизованы');
             } else {
                 this.auth = false
             }
 
         }
+        console.log(this.auth)
     }
 }
 
